@@ -1,11 +1,16 @@
 import styles from './index.css';
+import SiderMenu from '../components/SiderMenu';
+import { Layout } from 'antd';
 
 function BasicLayout(props) {
   return (
-    <div className={styles.normal}>
-      <h1 className={styles.title}>Yay! Welcome to umi!</h1>
-      { props.children }
-    </div>
+    <Layout
+      style={{
+        minHeight: '100vh',
+      }}
+    >
+      <SiderMenu />
+    </Layout>
   );
 }
 
